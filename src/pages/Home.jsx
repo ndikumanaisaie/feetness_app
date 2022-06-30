@@ -1,8 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
+import { Box } from '@mui/material';
 
 const Home = () => (
-    <div>Home</div>
+    <Box>
+        <HeroBanner />
+        <SearchExercises />
+        <Exercises />
+    </Box>
 );
 
 export default Home;
