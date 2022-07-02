@@ -6,12 +6,26 @@ import Exercises from '../components/Exercises.jsx';
 import SearchExercises from '../components/SearchExercises.jsx';
 import HeroBanner from '../components/HeroBanner.jsx';
 
-const Home = () => (
-    <Box>
-        <HeroBanner />
-        <SearchExercises />
-        <Exercises />
-    </Box>
-);
+const Home = () => {
+  const [bodyPart, setBodyPart] = useState('all');
+  const [exercises, setExercises] = useState([]);
+
+  return (
+
+        <Box>
+            <HeroBanner />
+            <SearchExercises
+                setExercises={ setExercises }
+                bodyPart={bodyPart}
+                setBodyPart={setBodyPart}
+            />
+            <Exercises
+                setExercises={ setExercises }
+                bodyPart={bodyPart}
+                setBodyPart={setBodyPart}
+            />
+        </Box>
+  );
+};
 
 export default Home;
