@@ -31,9 +31,11 @@
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.6",
     "lodash": "^4.17.21",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "dev": "webpack --mode development",
@@ -55,6 +57,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ndikumanaisaie/react_course.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
   },
   "keywords": [],
   "author": "",

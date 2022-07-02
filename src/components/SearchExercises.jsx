@@ -3,12 +3,18 @@ import React, { useEffect, useState } from 'react';
 import {
   Box, Button, Stack, TextField, Typography,
 } from '@mui/material';
+import { fetchData, exerciseOptions } from '../utils/fetchData.js';
 
 const SearchExercises = () => {
   const [search, setSearch] = useState('');
+
   const handleSearch = async () => {
-    // const exercisesData = await fetchData();
+    if (search) {
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      console.log(exercisesData);
+    }
   };
+
   return (
     <Stack
       alignItems="center"
