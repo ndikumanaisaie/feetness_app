@@ -30,6 +30,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.6",
+    "babel": "^6.23.0",
     "lodash": "^4.17.21",
     "process": "^0.11.10",
     "react": "^18.2.0",
@@ -51,8 +52,8 @@
       "jest-localstorage-mock"
     ]
   },
-  "name": "filmpire",
-  "description": "\"filmpire\" This website is designed entirely in react. It lets users search for their prefered movies from an api.",
+  "name": "fitness_app",
+  "description": "\"fitness_app\" This website is designed entirely in react. It lets users search for their prefered movies from an api.",
   "version": "1.0.0",
   "private": true,
   "repository": {

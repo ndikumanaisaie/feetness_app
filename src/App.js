@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
-import ExerciseDetail from './pages/ExerciseDetail.jsx';
-import Navbar from './components/Navbar.jsx';
-import Home from './pages/Home.jsx';
-import Footer from './components/Footer.jsx';
+import ExerciseDetail from './pages/ExerciseDetail.js';
+import Navbar from './components/Navbar.js';
+import Home from './pages/Home.js';
+import Footer from './components/Footer.js';
 
 const App = () => (
   <Box
