@@ -29,6 +29,7 @@ module.exports = {
               }],
               '@babel/preset-react',
             ],
+            plugins: ['@babel/proposal-class-properties'],
           },
         }],
       },
