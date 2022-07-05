@@ -6,7 +6,7 @@ const Loader = () => {
   return (
    <Stack 
     direction="row"
-    justifyConent="center"
+    justifyContent="center"
     alignItems="center"
     width="100%"
    >

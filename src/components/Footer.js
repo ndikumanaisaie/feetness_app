@@ -7,7 +7,7 @@ import Logo from '../assets/images/Logo-1.png';
 const Footer = () => (
     <Box>
         <Stack
-            gap="40px"
+            gap="20px"
             alignItems="center"
             px="40px"
             pt="24px"

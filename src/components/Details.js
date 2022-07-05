@@ -22,7 +22,7 @@ const Details = ({exerciseDetail}) => {
       icon: EquipmentImage,
       name: equipment,
     },
-  ]
+  ];
 
   return (
     <Stack
@@ -45,7 +45,7 @@ const Details = ({exerciseDetail}) => {
           improve your mood and gain energy.
         </Typography>
         {
-          exetradetail.map((item) => (
+          extraDetails.map((item) => (
             <Stack
               key={item.name}
               direction="row"
