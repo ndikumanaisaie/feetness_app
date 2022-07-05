@@ -1,15 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Box } from '@mui/material'
-import { Link } from 'react-router-dom'
-import { Button, Stack, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
+import {
+  Box, Button, Stack, Typography,
+} from '@mui/material';
 
-const ExerciseCard = ({exercise}) => (
-    <Link 
+const ExerciseCard = ({ exercise }) => (
+    <Link
         className="exercise-card"
         to={`/exercise/${exercise.id}`}
     >
-        <img 
+        <img
             src={exercise.gifUrl}
             alt={exercise.name}
             loading="lazy"
@@ -19,12 +20,12 @@ const ExerciseCard = ({exercise}) => (
         >
             <Button
                 sx={{
-                    ml: '21px',
-                    color: '#fff',
-                    background: '#ffa9a9',
-                    fontSize: '14px',
-                    borderRadius: '20px',
-                    textTransform: 'capitalize'
+                  ml: '21px',
+                  color: '#fff',
+                  background: '#ffa9a9',
+                  fontSize: '14px',
+                  borderRadius: '20px',
+                  textTransform: 'capitalize',
                 }}
             >
                 {exercise.bodyPart}
@@ -32,18 +33,18 @@ const ExerciseCard = ({exercise}) => (
 
             <Button
                 sx={{
-                    ml: '21px',
-                    color: '#fff',
-                    background: '#fcc757',
-                    fontSize: '14px',
-                    borderRadius: '20px',
-                    textTransform: 'capitalize'
+                  ml: '21px',
+                  color: '#fff',
+                  background: '#fcc757',
+                  fontSize: '14px',
+                  borderRadius: '20px',
+                  textTransform: 'capitalize',
                 }}
             >
                 {exercise.target}
             </Button>
         </Stack>
-        <Typography 
+        <Typography
             ml="21px"
             color="#000"
             fontWeight="bold"

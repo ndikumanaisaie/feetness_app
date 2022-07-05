@@ -44,6 +44,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
+    "format": "prettier-eslint --eslint-config-path ./.eslintrc.js --write '**/*.js'",
+    "lint": "eslint . --ext .js .jsx",
     "dev": "webpack --mode development",
     "test": "jest --coverage",
     "start": "webpack serve --open",

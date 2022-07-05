@@ -5,41 +5,38 @@ import { Box, Stack, Typography } from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 
-
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
-    const [currentPage, setCurrentPage] = useState(1)
-    const exercisePerPage = 9;
+  const [currentPage, setCurrentPage] = useState(1);
+  const exercisePerPage = 9;
 
-    const indexOfLastExercise = currentPage * exercisePerPage;
-    const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
-    const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
-    
-    const paginate = (e, value) => {
-        setCurrentPage(value);
+  const indexOfLastExercise = currentPage * exercisePerPage;
+  const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
+  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
 
-        window.scrollTo({top: 1800, behavior: 'smooth'})
-    }
+  const paginate = (e, value) => {
+    setCurrentPage(value);
 
-    useEffect(() => {
-        const fetchExercisesData = async () => {
-            let exercisesData = [];
+    window.scrollTo({ top: 1800, behavior: 'smooth' });
+  };
 
-            if (bodyPart === 'all') {
-                exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-            } else {
-                exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
 
-            }
-            setExercises(exercisesData);
-        }
+      if (bodyPart === 'all') {
+        exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      } else {
+        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+      }
+      setExercises(exercisesData);
+    };
 
-        fetchExercisesData();
+    fetchExercisesData();
+  }, [bodyPart]);
 
-    }, [bodyPart])
+  return (
 
-    return (
-    
-        <Box 
+        <Box
             id="exercises"
             sx={{ mt: { lg: '110px' } }}
             mt="50px"
@@ -54,14 +51,14 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
             <Stack
                 direction="row"
-                sx={{gap: { lg: '110px', xs: '50px' }}}
+                sx={{ gap: { lg: '110px', xs: '50px' } }}
                 flexWrap="wrap"
                 justifyContent="center"
             >
                 {
                     currentExercises.map((exercise, index) => (
-                        <ExerciseCard 
-                            key={index} 
+                        <ExerciseCard
+                            key={index}
                             exercise={exercise}
                         />
                     ))
@@ -73,7 +70,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             >
                 {
                     exercises.length > 9 && (
-                        <Pagination 
+                        <Pagination
                             color="primary"
                             shape="rounded"
                             defaultPage={1}
@@ -86,7 +83,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
                 }
             </Stack>
         </Box>
-    );
-} 
+  );
+};
 
 export default Exercises;

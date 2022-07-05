@@ -12,7 +12,7 @@ const Footer = () => (
             px="40px"
             pt="24px"
         >
-            <img 
+            <img
                 src={Logo}
                 alt="footer logo"
                 width="200px"
