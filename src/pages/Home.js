@@ -11,7 +11,6 @@ const Home = () => {
   const [exercises, setExercises] = useState([]);
 
   return (
-
         <Box>
             <HeroBanner />
             <SearchExercises
