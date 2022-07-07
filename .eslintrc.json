@@ -19,6 +19,9 @@
     "linebreak-style": 0,
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
+    }],
+    "indent": [2, "tab", { 
+      "ignoredNodes": ["TemplateLiteral"]
     }]
   },
   "ignorePatterns": [
