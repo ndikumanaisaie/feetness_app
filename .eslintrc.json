@@ -6,7 +6,7 @@
     "node": true,
     "mocha": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -20,9 +20,9 @@
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
     }],
-    "indent": [2, "tab", { 
-      "ignoredNodes": ["TemplateLiteral"]
-    }]
+    "indent": [2, "tab"],
+    "no-tabs": 0,
+    "no-mixed-spaces-and-tabs": 0
   },
   "ignorePatterns": [
     "dist/",
