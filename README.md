@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 clone: run `git clone https://github.com/ndikumanaisaie/feetness_app.git`
-Move to cloned folder: run git cd TO-DO-LIST.
+Move to cloned folder: run git cd feetness_app.
 
 ## Install
 
