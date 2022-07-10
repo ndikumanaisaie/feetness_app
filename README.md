@@ -2,7 +2,7 @@
 
 ## Filmpire
 
-> This website is designed entirely in react using material UI. It is an feetness application that lets users search for different exercises based on body parts. It also show similar exercises and display their youtude videos.
+> This website is designed entirely in react using material UI. It is a feetness application that lets users search for different exercises based on body parts. It also show similar exercises and display their youtude videos.
 
 ## Below is the screenshot of my work
 ![Feetness App](https://github.com/ndikumanaisaie/feetness_app/blob/setup_ui/src/assets/images/shot.png)
@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 clone: run `git clone https://github.com/ndikumanaisaie/feetness_app.git`
-Move to cloned folder: run git cd TO-DO-LIST.
+Move to cloned folder: run git cd feetness_app.
 
 ## Install
 
